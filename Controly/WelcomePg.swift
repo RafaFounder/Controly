@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Main: UIViewController {
+class WelcomePg: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
