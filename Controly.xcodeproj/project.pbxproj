@@ -12,6 +12,7 @@
 		109B0BF11F37DBC0006FE995 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109B0BEF1F37DBC0006FE995 /* Main.storyboard */; };
 		109B0BF31F37DBC0006FE995 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 109B0BF21F37DBC0006FE995 /* Assets.xcassets */; };
 		109B0BF61F37DBC0006FE995 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109B0BF41F37DBC0006FE995 /* LaunchScreen.storyboard */; };
+		109B0C001F37E848006FE995 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B0BFF1F37E848006FE995 /* LoginPage.swift */; };
 		3273BE64666B1DF0C9622606 /* Pods_Controly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3DB8555062B76BF768CBB6 /* Pods_Controly.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		109B0BF21F37DBC0006FE995 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		109B0BF51F37DBC0006FE995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		109B0BF71F37DBC0006FE995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		109B0BFF1F37E848006FE995 /* LoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		BD3DB8555062B76BF768CBB6 /* Pods_Controly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Controly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74B07AC0C9498E2891D652B /* Pods-Controly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Controly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Controly/Pods-Controly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,9 +63,9 @@
 		109B0BEA1F37DBC0006FE995 /* Controly */ = {
 			isa = PBXGroup;
 			children = (
+				109B0BFE1F37E7C0006FE995 /* model */,
 				109B0BFD1F37E705006FE995 /* View */,
 				109B0BEB1F37DBC0006FE995 /* AppDelegate.swift */,
-				109B0BED1F37DBC0006FE995 /* WelcomePg.swift */,
 				109B0BEF1F37DBC0006FE995 /* Main.storyboard */,
 				109B0BF21F37DBC0006FE995 /* Assets.xcassets */,
 				109B0BF41F37DBC0006FE995 /* LaunchScreen.storyboard */,
@@ -75,8 +77,17 @@
 		109B0BFD1F37E705006FE995 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				109B0BED1F37DBC0006FE995 /* WelcomePg.swift */,
+				109B0BFF1F37E848006FE995 /* LoginPage.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		109B0BFE1F37E7C0006FE995 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		179D1FAB8E7D581EA685FC2E /* Pods */ = {
@@ -227,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				109B0BEE1F37DBC0006FE995 /* WelcomePg.swift in Sources */,
+				109B0C001F37E848006FE995 /* LoginPage.swift in Sources */,
 				109B0BEC1F37DBC0006FE995 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
