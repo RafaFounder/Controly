@@ -140,54 +140,82 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="4Ij-gW-qg0">
-                                <rect key="frame" x="25" y="418" width="270" height="110"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1Q-OY-b4U" customClass="LoginView" customModule="Controly" customModuleProvider="target">
+                                <rect key="frame" x="10" y="368" width="300" height="180"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" background="Cell" translatesAutoresizingMaskIntoConstraints="NO" id="6w9-vC-5Yu">
-                                        <rect key="frame" x="20" y="0.0" width="230" height="44"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4Ij-gW-qg0">
+                                        <rect key="frame" x="20" y="36" width="260" height="108"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" background="Cell" translatesAutoresizingMaskIntoConstraints="NO" id="6w9-vC-5Yu" userLabel="InputField">
+                                                <rect key="frame" x="20" y="0.0" width="220" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="kom-nq-clp"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="EditBegin:" destination="5S0-wX-XQV" eventType="editingDidBegin" id="4Sc-1a-nYI"/>
+                                                    <action selector="EditEnded:" destination="5S0-wX-XQV" eventType="editingDidEnd" id="iVo-Bf-g5V"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzf-7c-bgb">
+                                                <rect key="frame" x="108" y="44" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="1By-Kk-fDi"/>
+                                                    <constraint firstAttribute="height" constant="44" id="ODs-Fz-dvk"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="GoBtn"/>
+                                                <connections>
+                                                    <action selector="ClickNexttoPass:" destination="5S0-wX-XQV" eventType="touchUpInside" id="13d-1v-KsW"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dz4-1M-cqV">
+                                                <rect key="frame" x="45.5" y="108" width="169" height="0.0"/>
+                                                <state key="normal" title="Button" image="GoBtn"/>
+                                                <connections>
+                                                    <action selector="ClickNexttoPass:" destination="5S0-wX-XQV" eventType="touchUpInside" id="ZeG-Ln-SKE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="kom-nq-clp"/>
+                                            <constraint firstItem="6w9-vC-5Yu" firstAttribute="leading" secondItem="4Ij-gW-qg0" secondAttribute="leading" constant="20" id="Qu8-8c-GB3"/>
+                                            <constraint firstAttribute="height" constant="108" id="WDL-qd-QyZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="6w9-vC-5Yu" secondAttribute="trailing" constant="20" id="kae-JY-n9f"/>
                                         </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="GillSans-Light" family="Gill Sans" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
-                                        <connections>
-                                            <action selector="EditBegin:" destination="5S0-wX-XQV" eventType="editingDidBegin" id="HQq-QT-DYM"/>
-                                        </connections>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzf-7c-bgb">
-                                        <rect key="frame" x="113" y="66" width="44" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="44" id="1By-Kk-fDi"/>
-                                            <constraint firstAttribute="height" constant="44" id="ODs-Fz-dvk"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="GoBtn"/>
-                                    </button>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="6w9-vC-5Yu" firstAttribute="leading" secondItem="4Ij-gW-qg0" secondAttribute="leading" constant="20" id="106-o7-uti"/>
-                                    <constraint firstAttribute="trailing" secondItem="6w9-vC-5Yu" secondAttribute="trailing" constant="20" id="7Wg-W1-8Uz"/>
+                                    <constraint firstAttribute="height" constant="180" id="0La-7l-RVL"/>
+                                    <constraint firstItem="4Ij-gW-qg0" firstAttribute="leading" secondItem="I1Q-OY-b4U" secondAttribute="leading" constant="20" id="S6A-J8-E7G"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Ij-gW-qg0" secondAttribute="bottom" constant="36" id="WHs-rc-W0a"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Ij-gW-qg0" secondAttribute="trailing" constant="20" id="l5b-Gv-i9n"/>
+                                    <constraint firstItem="4Ij-gW-qg0" firstAttribute="centerX" secondItem="I1Q-OY-b4U" secondAttribute="centerX" id="qJr-kt-74R"/>
+                                    <constraint firstItem="4Ij-gW-qg0" firstAttribute="top" secondItem="I1Q-OY-b4U" secondAttribute="top" constant="36" id="urx-eb-xXu"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JVh-RE-FHs" firstAttribute="centerX" secondItem="EGv-da-zPv" secondAttribute="centerX" id="50D-1F-SrK"/>
+                            <constraint firstItem="I1Q-OY-b4U" firstAttribute="leading" secondItem="EGv-da-zPv" secondAttribute="leading" constant="10" id="8Nm-Yd-n8g"/>
                             <constraint firstItem="Qdb-Pa-pVB" firstAttribute="top" secondItem="lge-pk-fi0" secondAttribute="bottom" constant="25" id="A0s-Se-UVX"/>
-                            <constraint firstItem="4Ij-gW-qg0" firstAttribute="leading" secondItem="EGv-da-zPv" secondAttribute="leading" constant="25" id="BcC-cg-ywm"/>
                             <constraint firstItem="JVh-RE-FHs" firstAttribute="top" secondItem="Qdb-Pa-pVB" secondAttribute="bottom" constant="20" id="DmE-Bg-PVg"/>
-                            <constraint firstAttribute="trailing" secondItem="4Ij-gW-qg0" secondAttribute="trailing" constant="25" id="G48-lw-2BY"/>
-                            <constraint firstItem="ytT-1Z-pFr" firstAttribute="top" secondItem="4Ij-gW-qg0" secondAttribute="bottom" constant="40" id="ZDO-5r-UC0"/>
-                            <constraint firstItem="4Ij-gW-qg0" firstAttribute="centerX" secondItem="EGv-da-zPv" secondAttribute="centerX" id="shM-DO-Gyv"/>
+                            <constraint firstAttribute="trailing" secondItem="I1Q-OY-b4U" secondAttribute="trailing" constant="10" id="EkY-mE-GGW"/>
+                            <constraint firstItem="ytT-1Z-pFr" firstAttribute="top" secondItem="I1Q-OY-b4U" secondAttribute="bottom" constant="20" id="WNh-XX-uzr"/>
+                            <constraint firstItem="I1Q-OY-b4U" firstAttribute="centerX" secondItem="EGv-da-zPv" secondAttribute="centerX" id="kCD-ab-N62"/>
                             <constraint firstItem="Qdb-Pa-pVB" firstAttribute="centerX" secondItem="EGv-da-zPv" secondAttribute="centerX" id="xOv-lt-1hQ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="EmailText" destination="6w9-vC-5Yu" id="QYQ-mS-59T"/>
+                        <outlet property="InputField" destination="6w9-vC-5Yu" id="SGj-Rn-K3B"/>
                         <outlet property="LblTopConstraint" destination="DmE-Bg-PVg" id="w1R-bM-NR8"/>
                         <outlet property="LogoUpConstraint" destination="A0s-Se-UVX" id="2Xd-ph-6H7"/>
-                        <outlet property="TextfieldBottomConstraint" destination="ZDO-5r-UC0" id="43Y-9C-EwR"/>
+                        <outlet property="NextButton" destination="fzf-7c-bgb" id="dJL-Lq-rOV"/>
                         <outlet property="UpperLogo" destination="Qdb-Pa-pVB" id="Tnv-JC-2mz"/>
+                        <outlet property="ViewBottomConstraint" destination="WNh-XX-uzr" id="ZTY-KF-HkV"/>
+                        <outlet property="viewLoginView" destination="I1Q-OY-b4U" id="i8h-PQ-ihr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Pp-WX-WZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
